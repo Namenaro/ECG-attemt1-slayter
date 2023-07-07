@@ -37,10 +37,10 @@ def get_signal():
 def get_mini_ECG():
     full_signal = get_signal()
     step = 10
-    new_len = 85
+    new_len = 88
     new_indexes = list(range(0,  len(full_signal), step))
     new_signal = list([full_signal[i] for i in new_indexes])
-    return new_signal[0:85]
+    return new_signal[0:new_len]
 
 if __name__ == "__main__":
     print(get_signal())
